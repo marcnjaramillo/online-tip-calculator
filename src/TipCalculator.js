@@ -1,4 +1,14 @@
 import React, { useState } from 'react';
+import {
+  Container,
+  Form,
+  FormGroup,
+  Label,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Input
+} from 'reactstrap';
 
 const TipCalculator = () => {
   const [tipFields, setTipFields] = useState({
@@ -21,44 +31,51 @@ const TipCalculator = () => {
   let totalTip = (tipFields.bill * tipFields.tip).toFixed(2);
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className='field'>
-          <label>Total Bill</label>
-          $
-          <input
-            type='number'
-            name='bill'
-            value={tipFields.bill}
+    <Container>
+      <Form onSubmit={handleSubmit}>
+        <FormGroup>
+          <Label>Total Bill</Label>
+          <InputGroup>
+            <InputGroupAddon addonType='prepend'>
+              <InputGroupText>$</InputGroupText>
+            </InputGroupAddon>
+            <Input
+              type='number'
+              name='bill'
+              value={tipFields.bill}
+              onChange={handleChange}
+            />
+          </InputGroup>
+        </FormGroup>
+        <FormGroup>
+          <Label>Tip</Label>
+          <Input
+            type='select'
+            name='tip'
+            value={tipFields.tip}
             onChange={handleChange}
-          />
-        </div>
-        <div className='field'>
-          <label>
-            Select a tip amount:
-            <select name='tip' value={tipFields.tip} onChange={handleChange}>
-              <option value='.10'>10%</option>
-              <option value='.15'>15%</option>
-              <option value='.18'>18%</option>
-              <option value='.20'>20%</option>
-            </select>
-          </label>
-        </div>
-        <div className='field'>
-          <label>Party Size</label>
-          <input
+          >
+            <option value='.10'>10%</option>
+            <option value='.15'>15%</option>
+            <option value='.18'>18%</option>
+            <option value='.20'>20%</option>
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label>Party Size</Label>
+          <Input
             type='number'
             name='party'
             value={tipFields.party}
             onChange={handleChange}
           />
-        </div>
-        <input type='submit' value='Submit' />
-      </form>
+        </FormGroup>
+        <Input type='submit' value='Submit' />
+      </Form>
 
       <h2>Results</h2>
       <p>Total tip is ${totalTip}</p>
-    </div>
+    </Container>
   );
 };
 
