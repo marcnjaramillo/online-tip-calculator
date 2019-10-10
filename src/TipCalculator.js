@@ -30,8 +30,11 @@ const TipCalculator = () => {
 
   let totalTip = (tipFields.bill * tipFields.tip).toFixed(2);
 
+  let splitTip = (totalTip / tipFields.party).toFixed(2);
+
   return (
     <Container>
+      <h1>Online Tip Calculator</h1>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label>Total Bill</Label>
@@ -70,11 +73,15 @@ const TipCalculator = () => {
             onChange={handleChange}
           />
         </FormGroup>
-        <Input type='submit' value='Submit' />
       </Form>
 
       <h2>Results</h2>
       <p>Total tip is ${totalTip}</p>
+      {tipFields.party > 1 ? (
+        <p>Each person is responsible for ${splitTip}</p>
+      ) : (
+        undefined
+      )}
     </Container>
   );
 };
