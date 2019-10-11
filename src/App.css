@@ -2,6 +2,10 @@ html {
   background-color: #4682b4;
 }
 
+body#app {
+  margin-bottom: 6rem;
+}
+
 .App {
   background-color: #4682b4;
   text-align: center;
