@@ -4,7 +4,7 @@ This is a simple online tip calculator built using React. It will prompt you to 
 
 ## Live Application
 
-To see this application in action, please visit the [site](https://online-tip-calculator.herokuapp.com/).
+To see this application in action, please visit the [site](https://online-tip-calculator.herokuapp.com/). You can even pull it up on your phone!
 
 **NOTE:** This app is hosted on [Heroku](https://www.heroku.com/) and is on a free plan, so it will take some time for it to finish loading.
 
