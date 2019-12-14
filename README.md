@@ -14,7 +14,7 @@ If you would like to use this application for your own projects or look under th
 
 ### Running the App
 
-To get things started, run `npm start` from within the project directory. The application will be ready to view on [http://localhost:3000](http://localhost:3000). If you make any changes to the code, the page will automatically reload once you save. If there are any errors, they will show up in the console.
+To get things started, `cd` to the project directory and run `npm install` to make sure you have the required dependencies for the application to work. Once the setup is complete run `npm start`. The application will be ready to view on [http://localhost:3000](http://localhost:3000). If you make any changes to the code, the page will automatically reload once you save. If there are any errors, they will show up in the console.
 
 # Other Useful Information
 
