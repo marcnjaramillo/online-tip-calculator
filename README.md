@@ -1,16 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About This App
 
-## Available Scripts
+This is a simple online tip calculator built using React. It will prompt you to enter the total amount of the bill, the number of paying people in your party, and a tip amount. When you finish you will see a total bill amount including tip and an even breakdown for each member of your party.
 
-In the project directory, you can run:
+## Live Application
 
-### `npm start`
+To see this application in action, please visit the [site](https://online-tip-calculator.herokuapp.com/).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**NOTE:** This app is hosted on [Heroku](https://www.heroku.com/) and is on a free plan, so it will take some time for it to finish loading.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Interacting With the App Locally
+
+If you would like to use this application for your own projects or look under the hood, fork this repo and then clone it to your local machine.
+
+### Running the App
+
+To get things started, run `npm start` from within the project directory. The application will be ready to view on [http://localhost:3000](http://localhost:3000). If you make any changes to the code, the page will automatically reload once you save. If there are any errors, they will show up in the console.
+
+# Other Useful Information
+
+This app was built with `create-react-app`, and has included additional documentation you may find useful:
+
+## Other Available Scripts
 
 ### `npm test`
 
